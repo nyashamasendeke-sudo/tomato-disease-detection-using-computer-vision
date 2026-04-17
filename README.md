@@ -10,46 +10,46 @@ Model inference was also evaluated noting parameters such as latency.
 
 Hardware considerations were taken into account to reduce latencies during inference\
 
-Project 
-disease_detection_project/
-├── data/                      # Data storage (often ignored by git)
-│   ├── raw/                   # Original images (immutable)
-│   ├── processed/ # Resized or augmented images
-│   └── metadata.csv           # Image paths, labels, and quality flags
-├── notebooks/                 # Exploratory Data Analysis & prototyping
-│   ├── 01_eda.ipynb           # Data visualization and distribution checks
-│   └── 02_model_training.ipynb # Initial transfer learning experiments
-├── src/                       # Production-level source code
-│   ├── data_loader.py         # Scripts to load and split data
-│   ├── preprocess.py          # Image resizing, normalization, and augmentation
-│   ├── model.py               # Transfer learning model definition (e.g., ResNet, MobileNet)
-│   ├── train.py               # Training loops and callbacks
-│   └── evaluate.py            # Performance metrics (Accuracy, F1-score, Confusion Matrix)
+Project   
+disease_detection_project/  
+├── data/                      # Data storage (often ignored by git)  
+│   ├── raw/                   # Original images (immutable)  
+│   ├── processed/ # Resized or augmented images  
+│   └── metadata.csv           # Image paths, labels, and quality flags  
+├── notebooks/                 # Exploratory Data Analysis & prototyping  
+│   ├── 01_eda.ipynb           # Data visualization and distribution checks  
+│   └── 02_model_training.ipynb # Initial transfer learning experiments  
+├── src/                       # Production-level source code  
+│   ├── data_loader.py         # Scripts to load and split data  
+│   ├── preprocess.py          # Image resizing, normalization, and augmentation  
+│   ├── model.py               # Transfer learning model definition (e.g., ResNet, MobileNet)  
+│   ├── train.py               # Training loops and callbacks  
+│   └── evaluate.py            # Performance metrics (Accuracy, F1-score, Confusion Matrix)  
 ├── models/                    # Saved model weights (.h5, .pth, or .tflite)
-├── results/                   # Training logs, plots, and evaluation reports
-├── config.yaml                # Hyperparameters (learning rate, batch size, model name)
-├── requirements.txt           # Python dependencies (TensorFlow, PyTorch, etc.)
-└── README.md                  # Project overview and setup instructions
+├── results/                   # Training logs, plots, and evaluation reports  
+├── config.yaml                # Hyperparameters (learning rate, batch size, model name)  
+├── requirements.txt           # Python dependencies (TensorFlow, PyTorch, etc.)  
+└── README.md                  # Project overview and setup instructions  
 
-FILE STRUCTURE 2 :COMPARE BETWEEN THE TWO FOLDERS AND COM UP WITH A FINAL STRUCTRE
+FILE STRUCTURE 2 :COMPARE BETWEEN THE TWO FOLDERS AND COM UP WITH A FINAL STRUCTRE  
 
-── data/                   # Git-ignored (large files)
-│   ├── raw/                # Original images (untouched)
-│   └── processed/          # Resized, normalized, or augmented images
-│       ├── train/          # Subfolders for each class (e.g., /healthy, /diseased)
-│       ├── val/
-│       └── test/
-├── models/                 # Saved model weights (.h5, .pth, or .tflite)
-├── notebooks/              # Jupyter notebooks for EDA and prototyping
-├── src/                    # Source code for the pipeline
-│   ├── __init__.py
-│   ├── data_loader.py      # Scripts for augmentation and batching
-│   ├── model.py            # Architecture and Transfer Learning setup
-│   ├── train.py            # The main training loop
-│   └── utils.py            # Metrics, plotting, and logging helpers
-├── logs/                   # TensorBoard or CSV training logs
-├── tests/                  # Unit tests for image processing logic
-├── requirements.txt        # List of dependencies (TensorFlow, PyTorch, OpenCV)
-└── main.py                 # Entry point to run the full pipeline
+── data/                   # Git-ignored (large files)  
+│   ├── raw/                # Original images (untouched)  
+│   └── processed/          # Resized, normalized, or augmented images  
+│       ├── train/          # Subfolders for each class (e.g., /healthy, /diseased)  
+│       ├── val/  
+│       └── test/  
+├── models/                 # Saved model weights (.h5, .pth, or .tflite)  
+├── notebooks/              # Jupyter notebooks for EDA and prototyping    
+├── src/                    # Source code for the pipeline  
+│   ├── __init__.py  
+│   ├── data_loader.py      # Scripts for augmentation and batching  
+│   ├── model.py            # Architecture and Transfer Learning setup  
+│   ├── train.py            # The main training loop  
+│   └── utils.py            # Metrics, plotting, and logging helpers  
+├── logs/                   # TensorBoard or CSV training logs  
+├── tests/                  # Unit tests for image processing logic  
+├── requirements.txt        # List of dependencies (TensorFlow, PyTorch, OpenCV)  
+└── main.py                 # Entry point to run the full pipeline  
 
 
